@@ -28,23 +28,33 @@ items.forEach((item, index) => {
 });
 
 
-// const btnRight = document.querySelector('.btn-right');
-// const btnLeft = document.querySelector('.btn-left');
-// const btn = document.querySelectorAll('.btn');
+const btnRight = document.querySelector('.btn-right');
+const btnLeft = document.querySelector('.btn-left');
+const btnRandom = document.querySelector('.btn-random');
 const angle = 360/items.length;
 let currAngle = 0;
 
+btnRight.addEventListener('click',(event) => {
+    listAnimal.style.transform = `translate(-50%, -50%) rotateY(${currAngle += angle}deg)`    
+})
 
-document.addEventListener('click', (event) => {
-    if (window.innerWidth / 2 < event.clientX) {
-        currAngle += angle;
-    } else {
-        currAngle -= angle;
-    }
+btnLeft.addEventListener('click',(event) => {
+    listAnimal.style.transform = `translate(-50%, -50%) rotateY(${currAngle -= angle}deg)`    
+})
 
-    listAnimal.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
-});
+btnRandom.addEventListener('click',(event) => {
+    listAnimal.style.transform = `translate(-50%, -50%) rotateY(${currAngle += 300}deg)`
+})
 
+// document.addEventListener('click', (event) => {
+//     if (window.innerWidth / 2 < event.clientX) {
+//         currAngle += angle;
+//     } else {
+//         currAngle -= angle;
+//     }
+
+//     listAnimal.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+// });
 
 
 

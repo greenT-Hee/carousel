@@ -6,6 +6,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
 /* :root{
     --item-number: 6;
     --translateZ: calc(340px * var(--item-number) / 2 / 3.14);
@@ -37,10 +39,20 @@ body{
     margin-bottom: 5px;
     color: white;
 }
-.txt-title p:nth-of-type(3){
-    margin-top: 40px;
-    font-size: 24px;
+
+.btn-random{
+    width: 150px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    vertical-align: middle;
+    line-height: 2.5;
+    margin-top: 30px;
 }
+
 .list-animal{
     position: fixed;
     width: 340px;
@@ -88,17 +100,19 @@ body{
 } */
 
 
-.btn{
-    width: 80px;
+.right-arrow, .left-arrow{
+    width: 90px;
 }
 .btn-right{
     position: absolute;
     top: 55%;
-    right: 8%;
+    left: 40%;
 }
 .btn-left{
     position: absolute;
     top: 55%;
-    left: 8%;
+    right: 40%;
     transform: rotate(180deg);
+    transition: 0.5s;
 }
+
